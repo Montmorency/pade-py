@@ -1,0 +1,6 @@
+Python library for calculating Pade approximants based on Chebyshev
+Polynomials. Based on the algorithms described in Ref.:
+
+Fast and Stable Interpolation In Roots of Unity and Chebyshev Points
+Ricardo Pachon, Pedro Gonnet, And Joris Van Deun
+SIAM J. NUMER. ANAL. Vol. 50, No. 3, pp. 1713-1734
