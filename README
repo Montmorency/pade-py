@@ -13,7 +13,7 @@ Journal of Low Temperature Physics  Vol. 29, pp. 179-192
 
 run:
 
-pade cheb_pade.py
+python cheb_pade.py
 
 or
 
