@@ -1,7 +1,7 @@
 Pade-py
 =======
 
-Python library for calculating Pade approximants based on Chebyshev Polynomials. Based on the algorithms described in Ref.:
+Python library for calculating Pade approximants based on [Chebyshev Polynomials](https://en.wikipedia.org/wiki/Chebyshev_polynomials). Based on the algorithms described in Ref.:
 
 [Fast and Stable Interpolation In Roots of Unity and Chebyshev Points Ricardo Pachon, Pedro Gonnet, And Joris Van Deun, SIAM J. NUMER. ANAL. Vol. 50, No. 3, pp. 1713-1734](http://dx.doi.org/10.1137/100797291)
 
