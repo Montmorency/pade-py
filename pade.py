@@ -18,7 +18,7 @@ def freq(a,b,N):
   delta = (b-a)/float(N)
   return np.arange(a,b,delta)
 
-#vidberg-serene determine pade coefficients
+#vidberg-serene determines pade coefficients
 def pade_coeff(N,z,u):
   g = np.zeros((N,N), dtype=np.complex64)
   tmp1 = np.zeros(1, dtype=np.complex64)
@@ -72,12 +72,11 @@ if __name__=="__main__":
     u = np.zeros(n, dtype=np.complex64)
     z = np.arange(a1,b1,(b1-a1)/n)
     rez.append(np.arange(a1,b1,(b1-a1)/n))
+#sample function on imaginary axis.
     z = z * complex(0,1)
-    #z = z 
 #find order N interpolant
     u = [f_x(x) for x in z]
     a = pade_coeff(n, z, u) 
-    print z
     rh_list.append(np.array([pade_eval(n,z,a,x) for x in xrang], dtype=np.complex64))
     sample_list.append(np.array([f_x(x) for x in z], dtype=np.complex64))
 
@@ -86,14 +85,13 @@ if __name__=="__main__":
   ax1 = fig.add_subplot(111)
   ax1.set_ylim([-2,2])
   ax1.plot(xrang,fx, '-x')
-
   fx1 = np.array([f_x(complex(0,1.0)*x) for x in xrang])
   ax1.plot(xrang,fx1)
 
+#Plot real and imag part of f_x (blue and green), fitted function (red), 
+#and the sampling points (dots)
   for i in range(len(N)):
-    print rez, sample_list[i]
     ax1.plot(xrang, np.real(rh_list[i]), label = 'N = %s'%(N[i]))
-#		ax1.plot(xrang, np.imag(rh_list[i]), label = 'N = %s'%(N[i]))
     ax1.plot(rez[i], np.real(sample_list[i]),'o', label = 'sample %s'%(N[i]))
   plt.legend()
   plt.show()
